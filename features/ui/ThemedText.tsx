@@ -14,12 +14,11 @@ export function ThemedText({
   ...otherProps
 }: ThemedTextProps) {
   const typeStyles = {
-    default: "text-default text-light-text dark:text-dark-text",
-    title: "text-title font-bold text-light-text dark:text-dark-text",
-    defaultSemiBold:
-      "text-default font-semibold text-light-text dark:text-dark-text",
-    subtitle: "text-subtitle font-semibold text-light-text dark:text-dark-text",
-    link: "text-default text-light-tint dark:text-dark-tint underline",
+    default: "text-gray-900 dark:text-gray-100",
+    title: "text-2xl font-bold text-gray-900 dark:text-white",
+    defaultSemiBold: "text-gray-900 dark:text-white font-semibold",
+    subtitle: "text-xl font-semibold text-gray-900 dark:text-white",
+    link: "text-blue-600 dark:text-blue-400 underline",
   }[type];
 
   return (
