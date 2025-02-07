@@ -1,3 +1,20 @@
+# paul expo play
+
+Goals of this are:
+- Understand the Expo development workflow
+- Use a feature based folder structure rather than file-type folders
+- Use standard TS dev tools from server/web dev:
+   - Biome for linting
+   - PNPM for package management
+- Integrate with a REST API
+- Auth flow for email/password + Google auth
+- Patterns for auth middleware
+- Try Nativewind for styling
+- Understand how to build/package during CI/CD
+- Understand how to release over-the-air and via App Store/Play Store (EAS?)
+
+----
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
