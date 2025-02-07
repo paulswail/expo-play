@@ -6,7 +6,7 @@ const mockUserData = {
   id: "123",
   name: "Jane Doe",
   email: "jane@example.com",
-  avatar: "https://placekitten.com/200/200",
+  avatar: "https://ui-avatars.com/api/?name=Jane+Doe&size=200",
   bio: "Software developer and cat enthusiast",
 };
 
