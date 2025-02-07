@@ -1,5 +1,3 @@
-import { Image, Text, View } from "react-native";
-
 import { ThemedText } from "@/features/ui/ThemedText";
 import { ThemedView } from "@/features/ui/ThemedView";
 
@@ -17,36 +15,36 @@ interface UserProfileProps {
 
 export function UserProfile({ user }: UserProfileProps) {
   return (
-    <View className="flex-1 p-6 space-y-6">
+    <ThemedView className="flex-1 p-6 space-y-6">
       {/* Profile Info */}
-      <View className="space-y-2">
-        <Text className="text-2xl font-bold">{user.name}</Text>
-        <Text className="text-gray-600">{user.email}</Text>
-      </View>
+      <ThemedView className="space-y-2">
+        <ThemedText className="text-2xl font-bold">{user.name}</ThemedText>
+        <ThemedText className="text-gray-600">{user.email}</ThemedText>
+      </ThemedView>
 
       {/* About Section */}
-      <View className="space-y-2">
-        <Text className="text-xl font-semibold">About</Text>
-        <Text>{user.bio}</Text>
-      </View>
+      <ThemedView className="space-y-2">
+        <ThemedText className="text-xl font-semibold">About</ThemedText>
+        <ThemedText>{user.bio}</ThemedText>
+      </ThemedView>
 
       {/* Stats */}
-      <View className="space-y-4">
-        <View className="space-y-2">
-          <Text className="text-xl font-semibold">Posts</Text>
-          <Text>24</Text>
-        </View>
+      <ThemedView className="space-y-4">
+        <ThemedView className="space-y-2">
+          <ThemedText className="text-xl font-semibold">Posts</ThemedText>
+          <ThemedText>24</ThemedText>
+        </ThemedView>
 
-        <View className="space-y-2">
-          <Text className="text-xl font-semibold">Followers</Text>
-          <Text>1.2k</Text>
-        </View>
+        <ThemedView className="space-y-2">
+          <ThemedText className="text-xl font-semibold">Followers</ThemedText>
+          <ThemedText>1.2k</ThemedText>
+        </ThemedView>
 
-        <View className="space-y-2">
-          <Text className="text-xl font-semibold">Following</Text>
-          <Text>843</Text>
-        </View>
-      </View>
-    </View>
+        <ThemedView className="space-y-2">
+          <ThemedText className="text-xl font-semibold">Following</ThemedText>
+          <ThemedText>843</ThemedText>
+        </ThemedView>
+      </ThemedView>
+    </ThemedView>
   );
 }
