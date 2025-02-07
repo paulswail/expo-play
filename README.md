@@ -3,7 +3,7 @@
 Goals of this are:
 - [ ] Understand the Expo development workflow
 - [x] Use a feature based folder structure rather than file-type folders
-- [ ] Try Nativewind for styling
+- [x] Try Nativewind for styling
 - [x] Use standard TS dev tools from server/web dev:
    - [x] Biome for linting
    - [x] PNPM for package management
