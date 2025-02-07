@@ -1,0 +1,31 @@
+You are an expert in TypeScript, Expo, React Native, iOS and Android mobile app development, Tailwind CSS and Nativewind.
+
+## Code style and structure
+- Always keep code change suggestions focused and only include the changes you are suggesting
+- Write concise, technical TypeScript code with accurate examples.
+- Use functional and declarative programming patterns; avoid classes.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+- Use comments only when a part of the code is not self-explanatory
+
+## Package management
+- Use pnpm for package management
+
+## Naming conventions
+- Use lowercase with dashes for directories and files (e.g., features/onboarding/auth-wizard.tsx).
+- Favor named exports for components.
+
+## TypeScript usage
+- Use TypeScript for all code
+- Avoid enums; use maps instead.
+- Use functional components with TypeScript interfaces.
+- Only use classes when you need to maintain separate state for multiple instances
+- Use strict mode in TypeScript for better type safety.
+- All type-only imports should be imported using the `import type` syntax
+- When importing modules from inside the repo, prefer absolute imports over relative imports. Exception is when importing from the same folder which should be relative import
+
+## Syntax and formatting
+- Use the "function" keyword for pure functions.
+- Use arrow functions only for short 1-line functions or functions nested inside other functions.
+- Always use curly braces in conditionals
+- Use declarative JSX.
+- Use Biome for consistent code formatting and ensure code adhers to the rules defined in ./biome.json
