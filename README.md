@@ -6,8 +6,9 @@ Goals of this are:
 - Use standard TS dev tools from server/web dev:
    - Biome for linting
    - PNPM for package management
-- Integrate with a REST API
+- Integrate with a REST API with strongly typed sdk code-generated from OpenAPI spec (e.g. generating a React Query client)
 - Auth flow for email/password + Google auth
+- Patterns for doing data validation, ideally using Zod
 - Patterns for auth middleware
 - Try Nativewind for styling
 - Understand how to build/package during CI/CD
