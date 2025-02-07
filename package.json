@@ -10,7 +10,8 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "pnpm biome check",
-    "lint:fix": "pnpm biome check --write"
+    "lint:fix": "pnpm biome check --write",
+    "preinstall": "npx only-allow pnpm"
   },
   "jest": {
     "preset": "jest-expo"
