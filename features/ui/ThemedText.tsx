@@ -3,12 +3,14 @@ import { Text, type TextProps } from "react-native";
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
   darkColor?: string;
+  className?: string;
   type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link";
 };
 
 export function ThemedText({
   style,
   type = "default",
+  className = "",
   ...otherProps
 }: ThemedTextProps) {
   const typeStyles = {
@@ -20,5 +22,11 @@ export function ThemedText({
     link: "text-default text-light-tint dark:text-dark-tint underline",
   }[type];
 
-  return <Text className={typeStyles} style={style} {...otherProps} />;
+  return (
+    <Text
+      className={`${typeStyles} ${className}`}
+      style={style}
+      {...otherProps}
+    />
+  );
 }
