@@ -1,18 +1,18 @@
 # paul expo play
 
 Goals of this are:
-- Understand the Expo development workflow
-- Use a feature based folder structure rather than file-type folders
-- Use standard TS dev tools from server/web dev:
-   - Biome for linting
-   - PNPM for package management
-- Integrate with a REST API with strongly typed sdk code-generated from OpenAPI spec (e.g. generating a React Query client)
-- Auth flow for email/password + Google auth
-- Patterns for doing data validation, ideally using Zod
-- Patterns for auth middleware
-- Try Nativewind for styling
-- Understand how to build/package during CI/CD
-- Understand how to release over-the-air and via App Store/Play Store (EAS?)
+- [ ] Understand the Expo development workflow
+- [x] Use a feature based folder structure rather than file-type folders
+- [ ] Try Nativewind for styling
+- [x] Use standard TS dev tools from server/web dev:
+   - [x] Biome for linting
+   - [x] PNPM for package management
+- [ ] Integrate with a REST API with strongly typed sdk code-generated from OpenAPI spec (e.g. generating a React Query client)
+- [ ] Auth flow for email/password + Google auth
+- [ ] Patterns for doing data validation, ideally using Zod
+- [ ] Patterns for auth middleware
+- [ ] Understand how to build/package during CI/CD
+- [ ] Understand how to release over-the-air and via App Store/Play Store (EAS?)
 
 ----
 
