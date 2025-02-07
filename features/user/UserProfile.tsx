@@ -1,4 +1,7 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image } from "react-native";
+
+import { ThemedText } from "@/features/ui/ThemedText";
+import { ThemedView } from "@/features/ui/ThemedView";
 
 interface User {
   id: string;
@@ -14,54 +17,26 @@ interface UserProfileProps {
 
 export function UserProfile({ user }: UserProfileProps) {
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: user.avatar }} style={styles.avatar} />
-      <Text style={styles.name}>{user.name}</Text>
-      <Text style={styles.email}>{user.email}</Text>
-      <View style={styles.bioContainer}>
-        <Text style={styles.bioLabel}>About</Text>
-        <Text style={styles.bio}>{user.bio}</Text>
-      </View>
-    </View>
+    <ThemedView className="flex-1 p-4">
+      <ThemedView className="items-center mb-6">
+        <Image
+          source={{ uri: user.avatar }}
+          className="w-24 h-24 rounded-full mb-4"
+        />
+        <ThemedText type="title" className="mb-1">
+          {user.name}
+        </ThemedText>
+        <ThemedText className="text-light-icon dark:text-dark-icon">
+          {user.email}
+        </ThemedText>
+      </ThemedView>
+
+      <ThemedView className="p-4 rounded-lg bg-light-background dark:bg-dark-background">
+        <ThemedText type="subtitle" className="mb-2">
+          Bio
+        </ThemedText>
+        <ThemedText>{user.bio}</ThemedText>
+      </ThemedView>
+    </ThemedView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    padding: 20,
-    backgroundColor: "white",
-  },
-  avatar: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    marginBottom: 16,
-  },
-  name: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 8,
-  },
-  email: {
-    fontSize: 16,
-    color: "#666",
-    marginBottom: 24,
-  },
-  bioContainer: {
-    width: "100%",
-    padding: 16,
-    backgroundColor: "#f5f5f5",
-    borderRadius: 8,
-  },
-  bioLabel: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginBottom: 8,
-  },
-  bio: {
-    fontSize: 16,
-    lineHeight: 24,
-  },
-});
