@@ -9,11 +9,12 @@ export function ThemedView({
   style,
   lightColor,
   darkColor,
+  className,
   ...otherProps
 }: ThemedViewProps) {
   return (
     <View
-      className="bg-light-background dark:bg-dark-background"
+      className={`bg-light-background dark:bg-dark-background ${className}`}
       style={style}
       {...otherProps}
     />
