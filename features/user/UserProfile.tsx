@@ -1,5 +1,6 @@
 import { ThemedText } from "@/features/ui/ThemedText";
 import { ThemedView } from "@/features/ui/ThemedView";
+import { Image } from "react-native";
 
 interface User {
   id: string;
@@ -17,13 +18,23 @@ export function UserProfile({ user }: UserProfileProps) {
   return (
     <ThemedView className="flex-1 p-6 space-y-6">
       {/* Profile Info */}
-      <ThemedView className="space-y-2">
-        <ThemedText className="text-2xl font-bold dark:text-white">
-          {user.name}
-        </ThemedText>
-        <ThemedText className="text-gray-600 dark:text-gray-300">
-          {user.email}
-        </ThemedText>
+      <ThemedView className="items-center space-y-4">
+        <Image
+          source={{ uri: user.avatar }}
+          style={{
+            width: 120,
+            height: 120,
+            borderRadius: 60,
+          }}
+        />
+        <ThemedView className="space-y-2">
+          <ThemedText className="text-2xl font-bold dark:text-white">
+            {user.name}
+          </ThemedText>
+          <ThemedText className="text-gray-600 dark:text-gray-300">
+            {user.email}
+          </ThemedText>
+        </ThemedView>
       </ThemedView>
 
       {/* About Section */}
